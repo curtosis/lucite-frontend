@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lucite</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults, "nested_form" %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+<h1>LUCITE Prototype</h1>
+<div id="container">
+  <%- flash.each do |name, msg| -%>
+    <%= content_tag :div, msg, :id => "flash_#{name}" %>
+  <%- end -%>
+
+
+<%= yield %>
+</div>
+</body>
+</html>

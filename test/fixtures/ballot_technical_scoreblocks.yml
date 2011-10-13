@@ -1,0 +1,51 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  raw_ballot_id: 1
+  set_designer_name: MyString
+  set_design_score: MyString
+  set_construction_name: MyString
+  set_construction_score: MyString
+  set_painter_name: MyString
+  set_painting_score: MyString
+  set_decoration_name: MyString
+  set_decoration_score: MyString
+  properties_name: MyString
+  properties_score: MyString
+  light_designer: MyString
+  light_design_score: MyString
+  sound_designer: MyString
+  sound_design_score: MyString
+  sfx_name: MyString
+  sfx_score: MyString
+  costume_designer: MyString
+  costume_design_score: MyString
+  makeup_designer: MyString
+  makeup_design_score: MyString
+  hair_designer: MyString
+  hair_design_score: MyString
+
+two:
+  raw_ballot_id: 1
+  set_designer_name: MyString
+  set_design_score: MyString
+  set_construction_name: MyString
+  set_construction_score: MyString
+  set_painter_name: MyString
+  set_painting_score: MyString
+  set_decoration_name: MyString
+  set_decoration_score: MyString
+  properties_name: MyString
+  properties_score: MyString
+  light_designer: MyString
+  light_design_score: MyString
+  sound_designer: MyString
+  sound_design_score: MyString
+  sfx_name: MyString
+  sfx_score: MyString
+  costume_designer: MyString
+  costume_design_score: MyString
+  makeup_designer: MyString
+  makeup_design_score: MyString
+  hair_designer: MyString
+  hair_design_score: MyString

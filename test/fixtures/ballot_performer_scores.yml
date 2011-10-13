@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  performer_name: MyString
+  role_name: MyString
+  performer_gender: MyString
+  role_type: MyString
+  score: MyString
+
+two:
+  performer_name: MyString
+  role_name: MyString
+  performer_gender: MyString
+  role_type: MyString
+  score: MyString

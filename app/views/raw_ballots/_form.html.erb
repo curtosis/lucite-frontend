@@ -1,0 +1,98 @@
+<%= semantic_nested_form_for @raw_ballot, :url => { :action => "create" }, :html => { :method => :post } do |form| %>
+ <%= form.inputs "Show Data", :id => "show_data" do %>
+ <%= form.inputs :class => "form hvv" do %>
+   <%= form.input :show_title %>   
+   <%= form.input :producing_company, :as => :select, :collection => all_companies %>
+    <%= form.input :date_viewed, :as => :date_picker  %> 
+  <% end %>
+  <%= form.inputs :class => "form hvv" do %>
+    <%= form.input :adjudicator_name %>
+   <%= form.input :adjudicator_email, :as => :email %>
+   <%= form.input :adjudicator_company, :as => :select, :collection => all_companies %>
+   <%= form.input :adjudicator_number, :as => :select, :collection => adjudicator_numbers %>
+  <% end %>
+ <% end %>
+
+<%= form.inputs "Performance Elements", :id => "performance_elements" do %>
+  <%= form.fields_for :ballot_performer_scores do |performers| %>
+    <%= form.inputs :class => "form hvv" do %>
+      <%= render 'ballot_performer_score_fields', :f => performers %>
+    <% end %>
+ <% end %>
+  <%= form.link_to_add "Add Performer",:ballot_performer_scores %> 
+<% end %>
+
+<%= form.inputs "Technical Elements", :id => "technical_elements", :for => :ballot_technical_scoreblock do |technical_form| %>
+  <%= form.inputs :class => "form hvv" do %>
+    <%= technical_form.input :set_designer_name %>
+    <%= technical_form.input :set_design_score, :as => :select, :collection => score_values %>
+  <% end %>
+  <%= form.inputs :class => "form hvv" do %>
+    <%= technical_form.input :set_construction_name %>
+    <%= technical_form.input :set_construction_score, :as => :select, :collection => score_values %>
+  <% end %>
+  <%= form.inputs :class => "form hvv" do %>
+    <%= technical_form.input :set_painter_name %>
+    <%= technical_form.input :set_painting_score, :as => :select, :collection => score_values %>
+  <% end %>
+  <%= form.inputs :class => "form hvv" do %>
+    <%= technical_form.input :set_decoration_name %>
+    <%= technical_form.input :set_decoration_score, :as => :select, :collection => score_values %>
+  <% end %>
+  <%= form.inputs :class => "form hvv" do %>
+    <%= technical_form.input :properties_name %>
+    <%= technical_form.input :properties_score, :as => :select, :collection => score_values %>
+  <% end %>
+  <%= form.inputs :class => "form hvv" do %>
+    <%= technical_form.input :light_designer_name %>
+    <%= technical_form.input :light_design_score, :as => :select, :collection => score_values %>
+  <% end %>
+  <%= form.inputs :class => "form hvv" do %>
+    <%= technical_form.input :sound_designer_name %>
+    <%= technical_form.input :sound_design_score, :as => :select, :collection => score_values %>
+  <% end %>
+  <%= form.inputs :class => "form hvv" do %>
+    <%= technical_form.input :sfx_name %>
+    <%= technical_form.input :sfx_score, :as => :select, :collection => score_values %>
+  <% end %>
+  <%= form.inputs :class => "form hvv" do %>
+    <%= technical_form.input :costume_designer_name %>
+    <%= technical_form.input :costume_design_score, :as => :select, :collection => score_values %>
+  <% end %>
+  <%= form.inputs :class => "form hvv" do %>
+    <%= technical_form.input :makeup_designer_name %>
+    <%= technical_form.input :makeup_design_score, :as => :select, :collection => score_values %>
+  <% end %>
+  <%= form.inputs :class => "form hvv" do %>
+    <%= technical_form.input :hair_designer_name %>
+    <%= technical_form.input :hair_design_score, :as => :select, :collection => score_values %>
+  <% end %>
+<% end %>
+
+ <%= form.inputs "Overall Elements", :id => "overall_elements", :for => :ballot_overall_scoreblock do |overall_form| %>
+    <%= form.inputs :class => "form hvv" do %>
+       <%= overall_form.input :choreographer_name %>
+       <%= overall_form.input :choreography_score, :as => :select, :collection => score_values %>
+    <% end %>
+    <%= form.inputs :class => "form hvv" do %>
+     <%= overall_form.input :combat_choreographer_name %>
+     <%= overall_form.input :combat_choreography_score, :as => :select, :collection => score_values %>
+    <% end %>
+    <%= form.inputs :class => "form hvv" do %>
+      <%= overall_form.input :music_director_name %>
+     <%= overall_form.input :music_direction_score, :as => :select, :collection => score_values %>
+    <% end %>
+    <%= form.inputs :class => "form hvv" do %>
+      <%= overall_form.input :director_name %>
+      <%= overall_form.input :direction_score, :as => :select, :collection => score_values %>
+    <% end %>
+    <%= form.inputs :class => "form hvv" do %>
+      <%= overall_form.input :overall_names, :label => "Producer and Stage Manager", :input_html => { :size => 60 } %>
+      <%= overall_form.input :overall_score, :as => :select, :collection => score_values %>
+    <% end %>
+ <% end %>
+
+ <%= form.buttons do %>
+   <%= form.commit_button :label => "Submit" %>
+<% end %>
+<% end %>

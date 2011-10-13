@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  choreographer_name: MyString
+  choreography_score: MyString
+  combat_choreographer_name: MyString
+  combat_choreography_score: MyString
+  music_director_name: MyString
+  music_direction_score: MyString
+  director_name: MyString
+  direction_score: MyString
+  overall_names: MyString
+  overall_score: MyString
+
+two:
+  choreographer_name: MyString
+  choreography_score: MyString
+  combat_choreographer_name: MyString
+  combat_choreography_score: MyString
+  music_director_name: MyString
+  music_direction_score: MyString
+  director_name: MyString
+  direction_score: MyString
+  overall_names: MyString
+  overall_score: MyString

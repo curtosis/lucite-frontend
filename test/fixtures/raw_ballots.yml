@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  show_title: MyString
+  producing_company: MyString
+  date_viewed: MyString
+  adjudicator_name: MyString
+  adjudicator_company: MyString
+  adjudicator_number: MyString
+
+two:
+  show_title: MyString
+  producing_company: MyString
+  date_viewed: MyString
+  adjudicator_name: MyString
+  adjudicator_company: MyString
+  adjudicator_number: MyString

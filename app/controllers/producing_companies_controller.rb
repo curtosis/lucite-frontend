@@ -1,0 +1,2 @@
+class ProducingCompaniesController < ApplicationController
+end

@@ -1,0 +1,126 @@
+/* -------------------------------------------------------------------------------------------------
+
+Load this stylesheet after formtastic.css in your layouts to override the CSS to suit your needs.
+This will allow you to update formtastic.css with new releases without clobbering your own changes.
+
+For example, to make the inline hint paragraphs a little darker in color than the standard #666:
+
+form.formtastic fieldset > ol > li p.inline-hints { color:#333; }
+
+HINT:
+The following style may be *conditionally* included for improved support on older versions of IE(<8)
+form.formtastic fieldset ol li fieldset legend { margin-left: -6px;}
+
+--------------------------------------------------------------------------------------------------*/
+/*
+form.formtastic fieldset > ol > li {
+  margin: 0.1em 0.5em 0.5em 0;
+  /* display: inline-block; */
+/* }
+*/
+
+form.formtastic fieldset.inline_fields ol {
+    margin-left: 5%;
+}
+
+form.formtastic fieldset.inline_fields li {
+    float: left;
+    /* width: 100px; */
+    margin-right: 1em;
+}
+
+
+form.formtastic fieldset {
+    background-color: #eee;
+    border: 1px #000;
+}
+
+form.formtastic fieldset legend {
+    color: #fff;
+    background: #000;
+    font-size: 1.2em;
+    padding: 3px;
+}
+
+fieldset.buttons ol {
+    list-style: none;
+}
+
+form.formtastic fieldset > ol > li p.inline-errors { color:#cc0000; margin:0.5em 0 0 5%; }
+
+body {
+    background-color: #4B7399;
+    font-size: 14px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+a img {
+    border: none;
+}
+
+a {
+    color: #0000FF;
+}
+
+#container {
+    width: 75%;
+    margin: 0 auto;
+    background-color: #FFF;
+    padding: 20px 40px;
+    border: solid 1px black;
+    margin-top: 20px;
+}
+
+#flash_notice, #flash_error {
+    padding: 5px 8px;
+    margin: 10px 0;
+}
+
+#flash_notice {
+    background-color: #CFC;
+    border: solid 1px #6C6;
+}
+
+#flash_error {
+    background-color: #FCC;
+    border: solid 1px #C66;
+}
+
+#flash_alert {
+    background-color: #FCC;
+    border: solid 1px #C66;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid #CF0000;
+  padding: 0px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: 0;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 8px;
+}
+
+#errorExplanation ul {
+  margin: 2px 24px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: disc;
+}
