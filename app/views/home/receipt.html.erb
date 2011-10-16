@@ -1,0 +1,8 @@
+<h2>E-BALLOT RECEIPT</h2>
+<p>Your ballot was successfully transmitted.</p>
+<% if @digest %>
+  <p>Here is the fingerprint of the ballot as received.<p>
+  <%= image_tag "https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=#{@digest}"%>  
+<% end %>
+
+<%= link_to "Return to ballot entry screen", root_path %>

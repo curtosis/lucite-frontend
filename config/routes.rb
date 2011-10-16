@@ -1,6 +1,7 @@
 Lucite::Application.routes.draw do
   # get "home/index"
   root :to => "home#index"
+  get "/receipt", :to => "home#receipt"
 
   resources :producing_companies
   resources :raw_ballots, :only => [:new, :create]
