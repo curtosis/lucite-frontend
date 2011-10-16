@@ -37,6 +37,7 @@ class RawBallotsController < ApplicationController
     
     http = Net::HTTP.new(uri.host, uri.port)
     response = http.start { |htt| htt.request(req) }
+    puts response.body
     return response
   end
 end
