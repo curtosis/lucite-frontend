@@ -11,15 +11,15 @@ class RawBallotsController < ApplicationController
   def create
     @raw_ballot = RawBallot.new(params[:raw_ballot])
     if @raw_ballot.save
-      rc = post_to_backend(@raw_ballot)
-      case rc
+      response = post_to_backend(@raw_ballot)
+      case response
       when Net::HTTPSuccess, Net::HTTPRedirection
-        comment = "posted to backend"
+        comment = "posted to backend (Signature: #{response.body})"
       else
-        comment = "NOT posted to backend"
+        comment = "NOT posted to backend (error: #{response.body})"
       end
       Notifier.raw_ballot_notification(@raw_ballot, comment).deliver
-      redirect_to('/', :notice => "Ballot was successfully sent (and #{comment}).")
+      redirect_to('/', :notice => "Ballot was successfully sent and #{comment}.")
     else
       flash[:alert] = "You must complete all required fields."
       render 'new'
@@ -37,7 +37,6 @@ class RawBallotsController < ApplicationController
     
     http = Net::HTTP.new(uri.host, uri.port)
     response = http.start { |htt| htt.request(req) }
-    puts response.body
     return response
   end
 end
