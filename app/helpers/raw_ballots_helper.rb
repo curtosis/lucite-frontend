@@ -1,6 +1,6 @@
 module RawBallotsHelper
   def all_companies
-    ProducingCompany.find(:all)
+    RemoteMemberCompany.find(:all)
   end
   
   def adjudicator_numbers

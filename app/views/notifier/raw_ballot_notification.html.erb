@@ -3,9 +3,9 @@
 <p><b>BALLOT INFORMATION</b></p>
 <table>
   <tr><th align="right">Show Title:</th><td><%= @raw_ballot.show_title %></td></tr>
-  <tr><th align="right">Producing Company:</th><td><%= @raw_ballot.producing_company %></td></tr>
+  <tr><th align="right">Producing Company:</th><td><%= RemoteMemberCompany.find(@raw_ballot.producing_company).name %> (<%= @raw_ballot.producing_company %>)</td></tr>
   <tr><th align="right">Date Viewed:</th><td><%= @raw_ballot.date_viewed %></td></tr>
-  <tr><th align="right">Adjudicator Company:</th><td><%= @raw_ballot.adjudicator_company %></td></tr>
+  <tr><th align="right">Adjudicator Company:</th><td><%= RemoteMemberCompany.find(@raw_ballot.producing_company).name %> (<%= @raw_ballot.producing_company %>)</td></tr>
   <tr><th align="right">Adjudicator Number:</th><td><%= @raw_ballot.adjudicator_number %></td></tr>
 </table>
 

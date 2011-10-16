@@ -2,13 +2,13 @@
  <%= form.inputs "Show Data", :id => "show_data" do %>
  <%= form.inputs :class => "form hvv" do %>
    <%= form.input :show_title %>   
-   <%= form.input :producing_company, :as => :select, :collection => all_companies %>
-    <%= form.input :date_viewed, :as => :date_picker  %> 
+   <%= form.input :producing_company, :as => :select, :collection => all_companies, :value_method => :_id %>
+    <%= form.input :date_viewed, :as => :date_picker, :format => "%m/%d/%Y"  %> 
   <% end %>
   <%= form.inputs :class => "form hvv" do %>
     <%= form.input :adjudicator_name %>
    <%= form.input :adjudicator_email, :as => :email %>
-   <%= form.input :adjudicator_company, :as => :select, :collection => all_companies %>
+   <%= form.input :adjudicator_company, :as => :select, :collection => all_companies, :value_method => :_id %>
    <%= form.input :adjudicator_number, :as => :select, :collection => adjudicator_numbers %>
   <% end %>
  <% end %>
