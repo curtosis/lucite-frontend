@@ -88,7 +88,7 @@ ActiveRecord::Schema.define(:version => 20111008163831) do
   create_table "raw_ballots", :force => true do |t|
     t.string   "show_title"
     t.string   "producing_company"
-    t.date     "date_viewed",         :limit => 255
+    t.date     "date_viewed"
     t.string   "adjudicator_name"
     t.string   "adjudicator_email"
     t.string   "adjudicator_company"
