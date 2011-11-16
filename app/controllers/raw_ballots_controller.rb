@@ -11,16 +11,20 @@ class RawBallotsController < ApplicationController
   def create
     @raw_ballot = RawBallot.new(params[:raw_ballot])
     if @raw_ballot.save
-      response = post_to_backend(@raw_ballot)
+      response = (config.post_to_backend == :enabled) ? post_to_backend(@raw_ballot) : :disabled
       case response
       when Net::HTTPSuccess, Net::HTTPRedirection
-        comment = "posted to backend"
+        comment = "and posted to backend"
+      when :disabled
+        comment = ""
       else
-        comment = "NOT posted to backend (error: #{response.body})"
+        comment = "and NOT posted to backend (error: #{response.body})"
       end
-      Notifier.raw_ballot_notification(@raw_ballot, comment).deliver
-      session[:ballot_digest] = response.body
-      redirect_to('/receipt', :notice => "Ballot was successfully sent and #{comment}.")
+      if config.ballot_mailer == :enabled
+        Notifier.raw_ballot_notification(@raw_ballot, comment).deliver
+        session[:ballot_digest] = response.body
+      end
+      redirect_to('/receipt', :notice => "Ballot was successfully sent #{comment}.")
     else
       flash[:alert] = "You must complete all required fields."
       render 'new'

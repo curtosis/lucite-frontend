@@ -1,6 +1,10 @@
 module RawBallotsHelper
   def all_companies
-    RemoteMemberCompany.find(:all)
+    if Lucite::Application.config.company_source == :remote
+      RemoteMemberCompany.find(:all)
+    else
+      ProducingCompany.find(:all)
+    end
   end
   
   def adjudicator_numbers
