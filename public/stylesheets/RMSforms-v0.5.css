@@ -62,6 +62,7 @@ for example, the class:.hvv  =  [LI:Horizontal Block Element]  [LABEL:Verticle b
 .hvv input{ display:block;}
 .hvv select{ display:block;}
 .hvv textarea{ display:block;}
+.hvv input[type='hidden']{display:none;}
 
 
 .hii{ overflow:hidden; height:1% }

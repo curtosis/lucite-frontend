@@ -25,46 +25,68 @@
 <%= form.inputs "Technical Elements", :id => "technical_elements", :for => :ballot_technical_scoreblock do |technical_form| %>
   <%= form.inputs :class => "form hvv" do %>
     <%= technical_form.input :set_designer_name %>
+     <%= technical_form.input :set_designer_not_listed, :label => "Not
+  Listed", :hidden_fields => false %>
     <%= technical_form.input :set_design_score, :as => :select, :collection => score_values %>
   <% end %>
   <%= form.inputs :class => "form hvv" do %>
     <%= technical_form.input :set_construction_name %>
+     <%= technical_form.input :set_construction_not_listed, :label => "Not
+  Listed", :hidden_fields => false %>
     <%= technical_form.input :set_construction_score, :as => :select, :collection => score_values %>
   <% end %>
   <%= form.inputs :class => "form hvv" do %>
     <%= technical_form.input :set_painter_name %>
+     <%= technical_form.input :set_painter_not_listed, :label => "Not
+  Listed", :hidden_fields => false %>
     <%= technical_form.input :set_painting_score, :as => :select, :collection => score_values %>
   <% end %>
   <%= form.inputs :class => "form hvv" do %>
     <%= technical_form.input :set_decoration_name %>
+     <%= technical_form.input :set_decoration_not_listed, :label => "Not
+  Listed", :hidden_fields => false %>
     <%= technical_form.input :set_decoration_score, :as => :select, :collection => score_values %>
   <% end %>
   <%= form.inputs :class => "form hvv" do %>
     <%= technical_form.input :properties_name %>
+     <%= technical_form.input :properties_not_listed, :label => "Not
+  Listed", :hidden_fields => false %>
     <%= technical_form.input :properties_score, :as => :select, :collection => score_values %>
   <% end %>
   <%= form.inputs :class => "form hvv" do %>
     <%= technical_form.input :light_designer_name %>
+     <%= technical_form.input :light_designer_not_listed, :label => "Not
+  Listed", :hidden_fields => false %>
     <%= technical_form.input :light_design_score, :as => :select, :collection => score_values %>
   <% end %>
   <%= form.inputs :class => "form hvv" do %>
     <%= technical_form.input :sound_designer_name %>
+     <%= technical_form.input :sound_designer_not_listed, :label => "Not
+  Listed", :hidden_fields => false %>
     <%= technical_form.input :sound_design_score, :as => :select, :collection => score_values %>
   <% end %>
   <%= form.inputs :class => "form hvv" do %>
     <%= technical_form.input :sfx_name %>
+     <%= technical_form.input :sfx_not_listed, :label => "Not
+  Listed", :hidden_fields => false %>
     <%= technical_form.input :sfx_score, :as => :select, :collection => score_values %>
   <% end %>
   <%= form.inputs :class => "form hvv" do %>
     <%= technical_form.input :costume_designer_name %>
+     <%= technical_form.input :costume_designer_not_listed, :label => "Not
+  Listed", :hidden_fields => false %>
     <%= technical_form.input :costume_design_score, :as => :select, :collection => score_values %>
   <% end %>
   <%= form.inputs :class => "form hvv" do %>
     <%= technical_form.input :makeup_designer_name %>
+    <%= technical_form.input :makeup_designer_not_listed, :label => "Not
+  Listed", :hidden_fields => false %>
     <%= technical_form.input :makeup_design_score, :as => :select, :collection => score_values %>
   <% end %>
   <%= form.inputs :class => "form hvv" do %>
     <%= technical_form.input :hair_designer_name %>
+    <%= technical_form.input :hair_designer_not_listed, :label => "Not
+  Listed", :hidden_fields => false %>
     <%= technical_form.input :hair_design_score, :as => :select, :collection => score_values %>
   <% end %>
 <% end %>
