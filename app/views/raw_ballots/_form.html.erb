@@ -90,7 +90,7 @@
       <%= overall_form.input :overall_names, :label => "Producer and Stage Manager", :input_html => { :size => 60 } %>
       <%= overall_form.input :overall_score, :as => :select, :collection => score_values %>
    <% end %>
-   <% form.inputs :class => "form hvv" do %>
+   <%= form.inputs :class => "form hvv" do %>
       <%= overall_form.input :comments, :input_html => { :cols => 100  } %>
    <% end %>
  <% end %>
