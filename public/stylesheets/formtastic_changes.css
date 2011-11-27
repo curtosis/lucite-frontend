@@ -42,6 +42,12 @@ form.formtastic fieldset legend {
     padding: 3px;
 }
 
+form.formtastic fieldset.inner {
+	border: 1px solid #000;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
 fieldset.buttons ol {
     list-style: none;
 }

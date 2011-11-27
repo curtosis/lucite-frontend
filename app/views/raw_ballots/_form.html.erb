@@ -15,7 +15,7 @@
 
 <%= form.inputs "Performance Elements", :id => "performance_elements" do %>
   <%= form.fields_for :ballot_performer_scores do |performers| %>
-    <%= form.inputs :class => "form hvv" do %>
+    <%= form.inputs :class => "form hvv inner" do %>
       <%= render 'ballot_performer_score_fields', :f => performers %>
     <% end %>
  <% end %>
