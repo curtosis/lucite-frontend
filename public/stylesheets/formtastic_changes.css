@@ -130,3 +130,10 @@ a {
   font-size: 12px;
   list-style: disc;
 }
+
+.guidance {
+	background-color: #ddd;
+	padding: 1em;
+	margin-bottom: 1em;
+	text-align: center;
+}

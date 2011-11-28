@@ -14,6 +14,7 @@
  <% end %>
 
 <%= form.inputs "Performance Elements", :id => "performance_elements" do %>
+  <%= render 'performance_guidance' %>
   <%= form.fields_for :ballot_performer_scores do |performers| %>
     <%= form.inputs :class => "form hvv inner" do %>
       <%= render 'ballot_performer_score_fields', :f => performers %>
@@ -23,67 +24,79 @@
 <% end %>
 
 <%= form.inputs "Technical Elements", :id => "technical_elements", :for => :ballot_technical_scoreblock do |technical_form| %>
+  <%= render 'technical_guidance' %>
   <%= form.inputs :class => "form hvv" do %>
+  	<label><%= link_to "Set Design", "http://washingtontheater.org/Adjudication/Criteria.html#Set Design", :target => "_blank" %></label>
     <%= technical_form.input :set_designer_name %>
      <%= technical_form.input :set_designer_not_listed, :label => "Not
   Listed", :hidden_fields => false %>
     <%= technical_form.input :set_design_score, :as => :select, :collection => score_values %>
   <% end %>
   <%= form.inputs :class => "form hvv" do %>
+  <label><%= link_to "Set Construction", "http://washingtontheater.org/Adjudication/Criteria.html#Set Construction", :target => "_blank" %></label>
     <%= technical_form.input :set_construction_name %>
      <%= technical_form.input :set_construction_not_listed, :label => "Not
   Listed", :hidden_fields => false %>
     <%= technical_form.input :set_construction_score, :as => :select, :collection => score_values %>
   <% end %>
   <%= form.inputs :class => "form hvv" do %>
+  <label><%= link_to "Set Painting", "http://washingtontheater.org/Adjudication/Criteria.html#Set Painting", :target => "_blank" %></label>
     <%= technical_form.input :set_painter_name %>
      <%= technical_form.input :set_painter_not_listed, :label => "Not
   Listed", :hidden_fields => false %>
     <%= technical_form.input :set_painting_score, :as => :select, :collection => score_values %>
   <% end %>
   <%= form.inputs :class => "form hvv" do %>
+  <label><%= link_to "Set Decoration/Dressing", "http://washingtontheater.org/Adjudication/Criteria.html#Set Decoration/Dressing", :target => "_blank" %></label>
     <%= technical_form.input :set_decoration_name %>
      <%= technical_form.input :set_decoration_not_listed, :label => "Not
   Listed", :hidden_fields => false %>
     <%= technical_form.input :set_decoration_score, :as => :select, :collection => score_values %>
   <% end %>
   <%= form.inputs :class => "form hvv" do %>
+  <label><%= link_to "Properties", "http://washingtontheater.org/Adjudication/Criteria.html#Properties", :target => "_blank" %></label>
     <%= technical_form.input :properties_name %>
      <%= technical_form.input :properties_not_listed, :label => "Not
   Listed", :hidden_fields => false %>
     <%= technical_form.input :properties_score, :as => :select, :collection => score_values %>
   <% end %>
   <%= form.inputs :class => "form hvv" do %>
+  <label><%= link_to "Light Design", "http://washingtontheater.org/Adjudication/Criteria.html#Lighting Design", :target => "_blank" %></label>
     <%= technical_form.input :light_designer_name %>
      <%= technical_form.input :light_designer_not_listed, :label => "Not
   Listed", :hidden_fields => false %>
     <%= technical_form.input :light_design_score, :as => :select, :collection => score_values %>
   <% end %>
   <%= form.inputs :class => "form hvv" do %>
+  <label><%= link_to "Sound Design", "http://washingtontheater.org/Adjudication/Criteria.html#Sound Design", :target => "_blank" %></label>
     <%= technical_form.input :sound_designer_name %>
      <%= technical_form.input :sound_designer_not_listed, :label => "Not
   Listed", :hidden_fields => false %>
     <%= technical_form.input :sound_design_score, :as => :select, :collection => score_values %>
   <% end %>
   <%= form.inputs :class => "form hvv" do %>
+  <label><%= link_to "Special Effects", "http://washingtontheater.org/Adjudication/Criteria.html#Special Effects", :target => "_blank" %></label>
     <%= technical_form.input :sfx_name, :label => "Special Effects Name" %>
      <%= technical_form.input :sfx_not_listed, :label => "Not
   Listed", :hidden_fields => false %>
     <%= technical_form.input :sfx_score, :label => "Special Effects Score", :as => :select, :collection => score_values %>
   <% end %>
   <%= form.inputs :class => "form hvv" do %>
+  <label><%= link_to "Costumes", "http://washingtontheater.org/Adjudication/Criteria.html#Costumes", :target => "_blank" %></label>
     <%= technical_form.input :costume_designer_name %>
      <%= technical_form.input :costume_designer_not_listed, :label => "Not
   Listed", :hidden_fields => false %>
     <%= technical_form.input :costume_design_score, :as => :select, :collection => score_values %>
   <% end %>
   <%= form.inputs :class => "form hvv" do %>
+  <label><%= link_to "Makeup", "http://washingtontheater.org/Adjudication/Criteria.html#Make-up", :target => "_blank" %></label>
     <%= technical_form.input :makeup_designer_name %>
     <%= technical_form.input :makeup_designer_not_listed, :label => "Not
   Listed", :hidden_fields => false %>
     <%= technical_form.input :makeup_design_score, :as => :select, :collection => score_values %>
   <% end %>
   <%= form.inputs :class => "form hvv" do %>
+  <label><%= link_to "Hair", "http://washingtontheater.org/Adjudication/Criteria.html#Hair", :target => "_blank" %></label>
     <%= technical_form.input :hair_designer_name %>
     <%= technical_form.input :hair_designer_not_listed, :label => "Not
   Listed", :hidden_fields => false %>
@@ -92,27 +105,33 @@
 <% end %>
 
  <%= form.inputs "Overall Elements", :id => "overall_elements", :for => :ballot_overall_scoreblock do |overall_form| %>
+ 	<%= render 'overall_guidance' %>
     <%= form.inputs :class => "form hvv" do %>
+    <label><%= link_to "Choreography", "http://washingtontheater.org/Adjudication/Criteria.html#Choreography", :target => "_blank" %></label>
        <%= overall_form.input :choreographer_name %>
        <%= overall_form.input :choreographer_not_listed, :label => "Not Listed", :hidden_fields => false %> 
        <%= overall_form.input :choreography_score, :as => :select, :collection => score_values %>
     <% end %>
     <%= form.inputs :class => "form hvv" do %>
+    <label><%= link_to "Combat Choreography", "http://washingtontheater.org/Adjudication/Criteria.html#Combat Choreography", :target => "_blank" %></label>
      <%= overall_form.input :combat_choreographer_name %>
      <%= overall_form.input :combat_choreographer_not_listed, :label => "Not Listed", :hidden_fields => false %> 
      <%= overall_form.input :combat_choreography_score, :as => :select, :collection => score_values %>
     <% end %>
     <%= form.inputs :class => "form hvv" do %>
+    <label><%= link_to "Music Direction", "http://washingtontheater.org/Adjudication/Criteria.html#Musical Direction", :target => "_blank" %></label>
       <%= overall_form.input :music_director_name %>
       <%= overall_form.input :music_director_not_listed, :label => "Not Listed", :hidden_fields => false %> 
      <%= overall_form.input :music_direction_score, :as => :select, :collection => score_values %>
     <% end %>
     <%= form.inputs :class => "form hvv" do %>
+    <label><%= link_to "Direction", "http://washingtontheater.org/Adjudication/Criteria.html#Direction", :target => "_blank" %></label>
       <%= overall_form.input :director_name %>
       <%= overall_form.input :director_not_listed, :label => "Not Listed", :hidden_fields => false %> 
       <%= overall_form.input :direction_score, :as => :select, :collection => score_values %>
     <% end %>
     <%= form.inputs :class => "form hvv" do %>
+    <label><%= link_to "Overall Production", "http://washingtontheater.org/Adjudication/Criteria.html#Production", :target => "_blank" %></label>
       <%= overall_form.input :overall_names, :label => "Producer and Stage Manager", :input_html => { :size => 60 } %>
       <%= overall_form.input :producer_sm_not_listed, :label => "Not Listed", :hidden_fields => false %>
       <%= overall_form.input :overall_score, :as => :select, :collection => score_values %>
