@@ -94,22 +94,27 @@
  <%= form.inputs "Overall Elements", :id => "overall_elements", :for => :ballot_overall_scoreblock do |overall_form| %>
     <%= form.inputs :class => "form hvv" do %>
        <%= overall_form.input :choreographer_name %>
+       <%= overall_form.input :choreographer_not_listed, :label => "Not Listed", :hidden_fields => false %> 
        <%= overall_form.input :choreography_score, :as => :select, :collection => score_values %>
     <% end %>
     <%= form.inputs :class => "form hvv" do %>
      <%= overall_form.input :combat_choreographer_name %>
+     <%= overall_form.input :combat_choreographer_not_listed, :label => "Not Listed", :hidden_fields => false %> 
      <%= overall_form.input :combat_choreography_score, :as => :select, :collection => score_values %>
     <% end %>
     <%= form.inputs :class => "form hvv" do %>
       <%= overall_form.input :music_director_name %>
+      <%= overall_form.input :music_director_not_listed, :label => "Not Listed", :hidden_fields => false %> 
      <%= overall_form.input :music_direction_score, :as => :select, :collection => score_values %>
     <% end %>
     <%= form.inputs :class => "form hvv" do %>
       <%= overall_form.input :director_name %>
+      <%= overall_form.input :director_not_listed, :label => "Not Listed", :hidden_fields => false %> 
       <%= overall_form.input :direction_score, :as => :select, :collection => score_values %>
     <% end %>
     <%= form.inputs :class => "form hvv" do %>
       <%= overall_form.input :overall_names, :label => "Producer and Stage Manager", :input_html => { :size => 60 } %>
+      <%= overall_form.input :producer_sm_not_listed, :label => "Not Listed", :hidden_fields => false %>
       <%= overall_form.input :overall_score, :as => :select, :collection => score_values %>
    <% end %>
    <%= form.inputs :class => "form hvv" do %>

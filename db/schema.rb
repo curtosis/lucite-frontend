@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111116040426) do
+ActiveRecord::Schema.define(:version => 20111128034415) do
 
   create_table "ballot_overall_scoreblocks", :force => true do |t|
     t.integer  "raw_ballot_id"
@@ -27,6 +27,11 @@ ActiveRecord::Schema.define(:version => 20111116040426) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "comments"
+    t.boolean  "choreographer_not_listed"
+    t.boolean  "combat_choreographer_not_listed"
+    t.boolean  "music_director_not_listed"
+    t.boolean  "director_not_listed"
+    t.boolean  "producer_sm_not_listed"
   end
 
   create_table "ballot_performer_scores", :force => true do |t|
