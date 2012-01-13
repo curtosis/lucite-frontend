@@ -3,7 +3,7 @@
  <%= form.inputs :class => "form hvv" do %>
    <%= form.input :show_title %>   
    <%= form.input :producing_company, :as => :select, :collection => all_companies, :value_method => :_id %>
-    <%= form.input :date_viewed, :as => :date_picker, :format => "%m/%d/%Y"  %> 
+    <%= form.input :date_viewed, :as => :date_picker %> 
   <% end %>
   <%= form.inputs :class => "form hvv" do %>
     <%= form.input :adjudicator_name %>

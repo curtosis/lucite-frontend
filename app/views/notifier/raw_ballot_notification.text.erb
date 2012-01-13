@@ -6,13 +6,16 @@ Producing Company: <%= @raw_ballot.producing_company %>
 Date Viewed: <%= @raw_ballot.date_viewed %>
 Adjudicator Company: <%= @raw_ballot.adjudicator_company %>
 Adjudicator Number: <%= @raw_ballot.adjudicator_number %>
+Adjudicator Email: <%= @raw_ballot.adjudicator_email %>
 
-OVERALL SCORES
-Choreography:  <%= @raw_ballot.ballot_overall_scoreblock.choreographer_name %> / <%= @raw_ballot.ballot_overall_scoreblock.choreography_score %>
-Combat Choreography: <%= @raw_ballot.ballot_overall_scoreblock.combat_choreographer_name %> / <%= @raw_ballot.ballot_overall_scoreblock.combat_choreography_score %>
-Music Direction: <%= @raw_ballot.ballot_overall_scoreblock.music_director_name %> / <%= @raw_ballot.ballot_overall_scoreblock.music_direction_score %>
-Direction: <%= @raw_ballot.ballot_overall_scoreblock.director_name %> / <%= @raw_ballot.ballot_overall_scoreblock.direction_score %>
-Overall: <%= @raw_ballot.ballot_overall_scoreblock.overall_names %> / <%= @raw_ballot.ballot_overall_scoreblock.overall_score %>
+
+PERFORMANCE SCORES
+
+Actor//Role//Sex//Type//Score
+<% @raw_ballot.ballot_performer_scores.each do |role| %>
+<%= role.performer_name %>//<%= role.role_name %>//<%= role.performer_gender %>//<%= role.role_type %>//<%= role.score %>
+<% end %>
+
 
 TECHNICAL SCORES
 Set Design: <%= @raw_ballot.ballot_technical_scoreblock.set_designer_name %> / <%= @raw_ballot.ballot_technical_scoreblock.set_design_score %>
@@ -27,10 +30,14 @@ Costume Design: <%= @raw_ballot.ballot_technical_scoreblock.costume_designer_nam
 Makeup Design: <%= @raw_ballot.ballot_technical_scoreblock.makeup_designer_name %> / <%= @raw_ballot.ballot_technical_scoreblock.makeup_design_score %>
 Hair Design: <%= @raw_ballot.ballot_technical_scoreblock.hair_designer_name %> / <%= @raw_ballot.ballot_technical_scoreblock.hair_design_score %>
 
-PERFORMANCE SCORES
+OVERALL SCORES
+Choreography:  <%= @raw_ballot.ballot_overall_scoreblock.choreographer_name %> / <%= @raw_ballot.ballot_overall_scoreblock.choreography_score %>
+Combat Choreography: <%= @raw_ballot.ballot_overall_scoreblock.combat_choreographer_name %> / <%= @raw_ballot.ballot_overall_scoreblock.combat_choreography_score %>
+Music Direction: <%= @raw_ballot.ballot_overall_scoreblock.music_director_name %> / <%= @raw_ballot.ballot_overall_scoreblock.music_direction_score %>
+Direction: <%= @raw_ballot.ballot_overall_scoreblock.director_name %> / <%= @raw_ballot.ballot_overall_scoreblock.direction_score %>
+Overall: <%= @raw_ballot.ballot_overall_scoreblock.overall_names %> / <%= @raw_ballot.ballot_overall_scoreblock.overall_score %>
 
-Actor//Role//Sex//Type//Score
-<% @raw_ballot.ballot_performer_scores.each do |role| %>
-<%= role.performer_name %>//<%= role.role_name %>//<%= role.performer_gender %>//<%= role.role_type %>//<%= role.score %>
-<% end %>
+COMMENTS
+
+<%= @raw_ballot.ballot_overall_scoreblock.comments %>
 
