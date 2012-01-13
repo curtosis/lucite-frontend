@@ -137,6 +137,7 @@
       <%= overall_form.input :overall_score, :as => :select, :collection => score_values %>
    <% end %>
    <%= form.inputs :class => "form hvv" do %>
+      <%= render 'important_reminders' %>
       <%= overall_form.input :comments, :input_html => { :cols => 100  } %>
    <% end %>
  <% end %>
