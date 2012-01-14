@@ -2,7 +2,7 @@
 // This file is automatically included by javascript_include_tag :defaults
 
 $(document).ready(function(){
-  $('input.ui-date-picker').datepicker();
+  $('input.ui-date-picker').datepicker({ dateFormat: "yy-mm-dd"});
 });
 
 function remove_fields(link) {
