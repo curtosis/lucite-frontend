@@ -35,7 +35,7 @@ class RawBallotsController < ApplicationController
         end
       end
 
-      #session[:ballot] = @raw_ballot
+      session[:ballot] = @raw_ballot
       redirect_to('/receipt', :notice => "Ballot processed." + " [mail:#{mail_send} / backend:#{backend_posting}]")
 
     else

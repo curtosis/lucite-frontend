@@ -2,10 +2,10 @@ ActionMailer::Base.delivery_method = :smtp
 ActionMailer::Base.raise_delivery_errors = :true
 
 if Rails.env.development?
-	smtp_server = 'smtp.server'
+	smtp_server = 'smtp.gmail.com'
 	domain = 'heroku.com'
-	user_name = 'username'
-	password = 'password'
+	user_name = 'blutokyo@gmail.com'
+	password = 'dqudghemuqehjhtr'
 else
 	smtp_server = 'smtp.sendgrid.net'
 	domain = 'heroku.com'

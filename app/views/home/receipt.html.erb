@@ -5,4 +5,9 @@
   <%= image_tag "https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=#{@digest}"%>  
 <% end %>
 
+<% if @raw_ballot %>
+  <p> Here is the ballot as submitted. <b>You should print this and save it.</b><p>
+  <%= render 'ballot' %>
+<% end %>  
+
 <%= link_to "Return to ballot entry screen", root_path %>
