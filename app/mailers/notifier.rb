@@ -6,4 +6,5 @@ class Notifier < ActionMailer::Base
            :from => ENV['BALLOT_EMAIL_FROM'] || "eballot@washingtontheater.org", 
            :subject => "Ballot for #{raw_ballot.show_title} ")
   end
+  
 end

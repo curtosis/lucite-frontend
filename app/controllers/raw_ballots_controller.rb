@@ -30,13 +30,13 @@ class RawBallotsController < ApplicationController
         begin
           Notifier.raw_ballot_notification(@raw_ballot).deliver
           mail_send = :success
-        #rescue
-        #  mail_send = :error
+        rescue
+          mail_send = :error
         end
       end
 
       session[:ballot] = @raw_ballot
-      redirect_to('/receipt', :notice => "Ballot processed." + " [mail:#{mail_send} / backend:#{backend_posting}]")
+      redirect_to('/receipt', :notice => "Ballot processed." + " [mail:#{mail_send}; backend:#{backend_posting}]")
 
     else
       flash[:alert] = "You must complete all required fields."
@@ -45,7 +45,7 @@ class RawBallotsController < ApplicationController
   end
   
   def post_to_backend(raw_ballot)
-    endpoint = "http://localhost:3000/api/raw_ballots/submit"
+    endpoint = Rails.application.config.ballot_submit_endpoint
     uri = URI.parse(endpoint)
     req = Net::HTTP::Post.new(uri.path)
     req.body = raw_ballot.to_json(:include => [ :ballot_overall_scoreblock, :ballot_technical_scoreblock, :ballot_performer_scores ])

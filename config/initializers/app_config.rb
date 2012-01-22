@@ -14,3 +14,6 @@ print "Post to backend => #{Lucite::Application.config.post_to_backend}\n"
 
 Lucite::Application.config.ballot_mailer = symbolize(ENV['BALLOT_MAILER'] || :enabled)
 print "Ballot mailer => #{Lucite::Application.config.ballot_mailer}\n"
+
+Lucite::Application.config.ballot_submit_endpoint = ENV['BALLOT_SUBMIT_ENDPOINT']
+print "Ballot backend enpoint => #{Lucite::Application.config.ballot_submit_endpoint}\n"
