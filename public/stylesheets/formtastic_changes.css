@@ -74,7 +74,7 @@ a {
     background-color: #FFF;
     padding: 20px 40px;
     border: solid 1px black;
-    margin-top: 20px;
+    margin-top: -100px;
 }
 
 #flash_notice, #flash_error {
@@ -137,3 +137,4 @@ a {
 	margin-bottom: 1em;
 	text-align: center;
 }
+

@@ -136,10 +136,11 @@
       <%= overall_form.input :producer_sm_not_listed, :label => "Not Listed", :hidden_fields => false %>
       <%= overall_form.input :overall_score, :as => :select, :collection => score_values %>
    <% end %>
-   <%= form.inputs :class => "form hvv" do %>
-      <%= render 'important_reminders' %>
+   <%= form.inputs :class => "form hvv" do %>    
+      <%= render 'comment_guidance' %>
       <%= overall_form.input :comments, :input_html => { :cols => 100  } %>
    <% end %>
+   <%= render 'important_reminders' %>
  <% end %>
 
  <%= form.buttons do %>
