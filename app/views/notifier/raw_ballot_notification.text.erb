@@ -6,14 +6,15 @@ Producing Company: <%= @raw_ballot.producing_company %>
 Date Viewed: <%= @raw_ballot.date_viewed %>
 Adjudicator Company: <%= @raw_ballot.adjudicator_company %>
 Adjudicator Number: <%= @raw_ballot.adjudicator_number %>
+Adjudicator Name: <%= @raw_ballot.adjudicator_name %>
 Adjudicator Email: <%= @raw_ballot.adjudicator_email %>
 
 
 PERFORMANCE SCORES
 
-Actor//Role//Sex//Type//Score
+Role//Actor//Score//Type//Sex
 <% @raw_ballot.ballot_performer_scores.each do |role| %>
-<%= role.performer_name %>//<%= role.role_name %>//<%= role.performer_gender %>//<%= role.role_type %>//<%= role.score %>
+<%= role.role_name %>//<%= role.performer_name %>//<%= role.score %>//<%= role.role_type %>//<%= role.performer_gender %>
 <% end %>
 
 
