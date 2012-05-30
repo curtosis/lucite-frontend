@@ -5,25 +5,26 @@
   <tr><th align="right">Date Viewed:</th><td><%= @raw_ballot.date_viewed %></td></tr>
   <tr><th align="right">Adjudicator Company:</th><td><%= ProducingCompany.name_from_code(@raw_ballot.adjudicator_company) %> (<%= @raw_ballot.adjudicator_company %>)</td></tr>
   <tr><th align="right">Adjudicator Number:</th><td><%= @raw_ballot.adjudicator_number %></td></tr>
+  <tr><th align="right">Adjudicator Name:</th><td><%= @raw_ballot.adjudictor_name %></td></tr>
   <tr><th align="right">Adjudicator Email:</th><td><%= @raw_ballot.adjudicator_email %></td></tr>
 </table>
 
 <p><b>PERFORMANCE SCORES</b></p>
 <table>
   <tr>
-    <th>Actor</th>
     <th>Role</th>
-    <th>Sex</th>
-    <th>Type</th>
+    <th>Actor</th>
     <th>Score</th>
+    <th>Type</th>
+    <th>Sex</th>
   </tr>
   <% @raw_ballot.ballot_performer_scores.each do |role| %>
     <tr>
-      <td><%= role.performer_name %></td>
       <td><%= role.role_name %></td>
-      <td><%= role.performer_gender %></td>
-      <td><%= role.role_type %></td>
+      <td><%= role.performer_name %></td>
       <td><%= role.score %></td>
+      <td><%= role.role_type %></td>
+      <td><%= role.performer_gender %></td>
       </tr>
   <% end %>
 </table>
