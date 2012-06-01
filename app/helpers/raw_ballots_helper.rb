@@ -16,7 +16,7 @@ module RawBallotsHelper
      ["Alternate Judge", "A"]]
   end
   
-  def performance_score_values
+  def performer_score_values
     [["10 - Excellent", "10"], 
      ["9.5", "9.5"], 
      ["9 - Outstanding", "9"],
