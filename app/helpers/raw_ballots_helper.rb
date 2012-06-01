@@ -16,7 +16,7 @@ module RawBallotsHelper
      ["Alternate Judge", "A"]]
   end
   
-  def score_values
+  def performance_score_values
     [["10 - Excellent", "10"], 
      ["9.5", "9.5"], 
      ["9 - Outstanding", "9"],
@@ -37,6 +37,29 @@ module RawBallotsHelper
      ["1.5", "1.5"],
      ["1 - Did Not Meet Criteria", "1"],
      ["N/I - Not Identifiable", "N/I"]]
+  end
+
+  def score_values
+    [["10 - Excellent", "10"], 
+     ["9.5", "9.5"], 
+     ["9 - Outstanding", "9"],
+     ["8.5", "8.5"],
+     ["8 - Superior", "8"],
+     ["7.5", "7.5"],
+     ["7 - Noticeably Above Avg", "7"],
+     ["6.5", "6.5"],
+     ["6 - Slightly Above Avg", "6"],
+     ["5.5", "5.5"],
+     ["5 - Average", "5"],
+     ["4.5", "4.5"],
+     ["4 - Fair", "4"],
+     ["3.5", "3.5"],
+     ["3 - Noticeably Below Avg", "3"],
+     ["2.5", "2.5"],
+     ["2 - Poor", "2"],
+     ["1.5", "1.5"],
+     ["1 - Did Not Meet Criteria", "1"],
+     ["N/A - Not Applicable", "N/A"]]
   end
 
   def gender_values
