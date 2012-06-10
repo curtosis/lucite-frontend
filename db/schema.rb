@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120121193529) do
+ActiveRecord::Schema.define(:version => 20120610124155) do
 
   create_table "ballot_overall_scoreblocks", :force => true do |t|
     t.integer  "raw_ballot_id"
@@ -101,6 +101,7 @@ ActiveRecord::Schema.define(:version => 20120121193529) do
     t.string   "adjudicator_number"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "production_type"
   end
 
   create_table "sessions", :force => true do |t|

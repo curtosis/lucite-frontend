@@ -1,7 +1,8 @@
 <%= semantic_nested_form_for @raw_ballot, :url => { :action => "create" }, :html => { :method => :post } do |form| %>
  <%= form.inputs "Ballot Data", :id => "show_data" do %>
  <%= form.inputs :class => "form hvv" do %>
-   <%= form.input :show_title %>   
+   <%= form.input :show_title %>
+   <%= form.input :production_type, :as => :select, :collection => ["Play","Musical"] %>   
    <%= form.input :producing_company, :as => :select, :collection => all_companies, :value_method => :code %>
     <%= form.input :date_viewed, :as => :date_picker %> 
   <% end %>
