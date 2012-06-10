@@ -1,5 +1,5 @@
 - display_name: 2nd Star Productions
-  code: 2STR
+  code: SSP
 - display_name: Aldersgate Church Community Theatre
   code: ACCT
 - display_name: The Alliance Theatre
@@ -9,7 +9,7 @@
 - display_name: Bowie Community Theatre
   code: BCT
 - display_name: Capital City Players of DC
-  code: CAP
+  code: CCDC
 - display_name: Castaways Repertory Theatre
   code: CRT
 - display_name: Chevy Chase Players
@@ -19,7 +19,7 @@
 - display_name: Damascus Theatre Company
   code: DTC
 - display_name: Dominion Stage
-  code: DST
+  code: DS
 - display_name: Elden Street Players
   code: ESP
 - display_name: Fauquier Community Theatre
