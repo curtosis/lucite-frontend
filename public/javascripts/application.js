@@ -15,3 +15,18 @@ function add_fields(link, association, content) {
     var regexp = new RegExp("new_" + association, "g");
     $(link).parent().before(content.replace(regexp, new_id));
 }
+
+function cancel_backspace(e) {
+   var elid = $(document.activeElement).is("input:focus, textarea:focus"); 
+  	if(e.keyCode === 8 && !elid){ 
+      e.preventDefault(); 
+	}
+}
+
+$(document).keypress(function(e){ 
+  return cancel_backspace(e); 
+});
+
+$(document).keydown(function(e){
+  return cancel_backspace(e);
+});
