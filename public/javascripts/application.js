@@ -30,3 +30,20 @@ $(document).keypress(function(e){
 $(document).keydown(function(e){
   return cancel_backspace(e);
 });
+
+function cancel_enter(e) {
+	var elid = $(document.activeElement).is("textarea:focus, input#raw_ballot_submit:focus");
+	if (e.keyCode === 13 && !elid) {
+		e.preventDefault();
+	}
+}
+
+$(function(){
+$("form").keypress(function(e){
+	return cancel_enter(e);
+	});
+	
+$("form").keydown(function(e){
+	return cancel_enter(e);
+	});
+});
