@@ -1,9 +1,9 @@
 module RawBallotsHelper
   def all_companies
     if Lucite::Application.config.company_source == :remote
-      RemoteMemberCompany.find(:all)
+      RemoteMemberCompany.find(:all, :order => 'display_name ASC')
     else
-      ProducingCompany.find(:all)
+      ProducingCompany.find(:all, :order => 'display_name ASC')
     end
   end
   
