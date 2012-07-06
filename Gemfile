@@ -18,6 +18,7 @@ gem 'yaml_db'
 gem 'formtastic_datepicker_inputs'
 gem 'jquery-rails'
 gem 'nested_form', :git => "git://github.com/ryanb/nested_form"
+gem 'newrelic_rpm'
 
 # Use unicorn as the web server
 # gem 'unicorn'
